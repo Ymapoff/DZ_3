@@ -19,7 +19,7 @@ class CardTest {
     @Test
     void shouldTestApplication() {
 
-        SelenideElement form = $("[class]");
+        SelenideElement form = $("[action]");
         form.$("[data-test-id=name] input").sendKeys("Морозов Павлик");
         form.$("[data-test-id=phone] input").sendKeys("+79998887766");
         form.$("[data-test-id=agreement]").click();
@@ -31,7 +31,7 @@ class CardTest {
     @Test
     void invalidDataTestName() {
 
-        SelenideElement form = $("[class]");
+        SelenideElement form = $("[action]");
         form.$("[data-test-id=name] input").sendKeys("Pupkina Aliona");
         form.$("[data-test-id=phone] input").sendKeys("+79998887766");
         form.$("[data-test-id=agreement]").click();
@@ -43,7 +43,7 @@ class CardTest {
     @Test
     void invalidDataTestNoName() {
 
-        SelenideElement form = $("[class]");
+        SelenideElement form = $("[action]");
         form.$("[data-test-id=name] input").sendKeys("");
         form.$("[data-test-id=phone] input").sendKeys("+79998887766");
         form.$("[data-test-id=agreement]").click();
@@ -55,7 +55,7 @@ class CardTest {
     @Test
     void invalidDataTestNoPhone() {
 
-        SelenideElement form = $("[class]");
+        SelenideElement form = $("[action]");
         form.$("[data-test-id=name] input").sendKeys("Морозов Павлик");
         form.$("[data-test-id=phone] input").sendKeys("");
         form.$("[data-test-id=agreement]").click();
@@ -68,7 +68,7 @@ class CardTest {
     @Test
     void invalidDataTestPhone() {
 
-        SelenideElement form = $("[class]");
+        SelenideElement form = $("[action]");
         form.$("[data-test-id=name] input").sendKeys("Морозов Павлик");
         form.$("[data-test-id=phone] input").sendKeys("+7999888776");
         form.$("[data-test-id=agreement]").click();
@@ -81,7 +81,7 @@ class CardTest {
     @Test
     void invalidDataTestNoCheckbox() {
 
-        SelenideElement form = $("[class]");
+        SelenideElement form = $("[action]");
         form.$("[data-test-id=name] input").sendKeys("Морозов Павлик");
         form.$("[data-test-id=phone] input").sendKeys("+79998887766");
         form.$("[data-test-id=agreement]");
